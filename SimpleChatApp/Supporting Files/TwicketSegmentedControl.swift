@@ -16,7 +16,7 @@ open class TwicketSegmentedControl: UIControl {
     open static let height: CGFloat = Constants.height + Constants.topBottomMargin * 2
 
     private struct Constants {
-        static let height: CGFloat = 30
+        static let height: CGFloat = 40
         static let topBottomMargin: CGFloat = 5
         static let leadingTrailingMargin: CGFloat = 10
     }
@@ -88,7 +88,7 @@ open class TwicketSegmentedControl: UIControl {
         }
     }
 
-    open var font: UIFont = UIFont.systemFont(ofSize: 15, weight: UIFontWeightMedium) {
+    open var font: UIFont = UIFont.systemFont(ofSize: 15, weight: UIFont.Weight.medium) {
         didSet {
             updateLabelsFont(with: font)
         }

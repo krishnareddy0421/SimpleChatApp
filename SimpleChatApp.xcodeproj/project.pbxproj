@@ -14,6 +14,10 @@
 		9E6C1D5F1F9D0FA40088CB37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E6C1D5E1F9D0FA40088CB37 /* Assets.xcassets */; };
 		9E6C1D621F9D0FA40088CB37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E6C1D601F9D0FA40088CB37 /* LaunchScreen.storyboard */; };
 		9E6C1D6B1F9D1DB30088CB37 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6C1D6A1F9D1DB30088CB37 /* HomeVC.swift */; };
+		9EACCDC11F9D266700F42BA1 /* TwicketSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDBE1F9D266700F42BA1 /* TwicketSegmentedControl.swift */; };
+		9EACCDC21F9D266700F42BA1 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDBF1F9D266700F42BA1 /* Palette.swift */; };
+		9EACCDC31F9D266700F42BA1 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDC01F9D266700F42BA1 /* UIViewShadowExtension.swift */; };
+		9EACCDC61F9D292200F42BA1 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,11 @@
 		9E6C1D611F9D0FA40088CB37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E6C1D631F9D0FA40088CB37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E6C1D6A1F9D1DB30088CB37 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		9EACCDBD1F9D266600F42BA1 /* TwicketSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwicketSegmentedControl.h; sourceTree = "<group>"; };
+		9EACCDBE1F9D266700F42BA1 /* TwicketSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwicketSegmentedControl.swift; sourceTree = "<group>"; };
+		9EACCDBF1F9D266700F42BA1 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
+		9EACCDC01F9D266700F42BA1 /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtension.swift; sourceTree = "<group>"; };
+		9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		B1E4FADDF2F30C3DE2EA2FF5 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				9E6C1D571F9D0FA40088CB37 /* AppDelegate.swift */,
+				9EACCDBC1F9D262C00F42BA1 /* Supporting Files */,
+				9EACCDC41F9D28F900F42BA1 /* View */,
 				9E6C1D691F9D14E20088CB37 /* Controller */,
 				9E6C1D5B1F9D0FA40088CB37 /* Main.storyboard */,
 				9E6C1D5E1F9D0FA40088CB37 /* Assets.xcassets */,
@@ -89,6 +100,25 @@
 				9E6C1D6A1F9D1DB30088CB37 /* HomeVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		9EACCDBC1F9D262C00F42BA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9EACCDBF1F9D266700F42BA1 /* Palette.swift */,
+				9EACCDBD1F9D266600F42BA1 /* TwicketSegmentedControl.h */,
+				9EACCDBE1F9D266700F42BA1 /* TwicketSegmentedControl.swift */,
+				9EACCDC01F9D266700F42BA1 /* UIViewShadowExtension.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9EACCDC41F9D28F900F42BA1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		BDD0C7C0C89B6E60AFB6E45E /* Frameworks */ = {
@@ -196,12 +226,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
-				"${BUILT_PRODUCTS_DIR}/TwicketSegmentedControl/TwicketSegmentedControl.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwicketSegmentedControl.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,7 +258,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EACCDC31F9D266700F42BA1 /* UIViewShadowExtension.swift in Sources */,
+				9EACCDC11F9D266700F42BA1 /* TwicketSegmentedControl.swift in Sources */,
+				9EACCDC61F9D292200F42BA1 /* PeopleCell.swift in Sources */,
 				9E6C1D6B1F9D1DB30088CB37 /* HomeVC.swift in Sources */,
+				9EACCDC21F9D266700F42BA1 /* Palette.swift in Sources */,
 				9E6C1D5A1F9D0FA40088CB37 /* LoginVC.swift in Sources */,
 				9E6C1D581F9D0FA40088CB37 /* AppDelegate.swift in Sources */,
 			);

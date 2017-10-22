@@ -1,15 +1,12 @@
 PODS:
   - SwiftKeychainWrapper (3.0.1)
-  - TwicketSegmentedControl (0.1.2)
 
 DEPENDENCIES:
   - SwiftKeychainWrapper
-  - TwicketSegmentedControl
 
 SPEC CHECKSUMS:
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
-  TwicketSegmentedControl: 6d7a4cf243657e0ac3f00d06d873a25334c04042
 
-PODFILE CHECKSUM: 3db45723fcad9130659a27041ef100618606d6d9
+PODFILE CHECKSUM: 7b7773f0c194035c750747316cf4643a2efe7600
 
 COCOAPODS: 1.4.0.beta.1

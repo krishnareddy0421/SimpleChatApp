@@ -21,6 +21,12 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.stopActivitySpinner()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     @IBAction func setupLoginBtnPressed(_ sender: UIButton) {
@@ -28,24 +34,29 @@ class LoginVC: UIViewController {
         if sender.titleLabel?.text == "Sign Up" {
             guard let username = usernameTxt.text, let password = passwordTxt.text, let confPassword = confPasswordTxt.text, usernameTxt.text != "", passwordTxt.text != "", confPasswordTxt.text != "" else {
                 self.stopActivitySpinner()
+                 self.view.endEditing(true)
                 self.userDetailsErrorAlert()
                 return
             }
             if password == confPassword {
                 self.stopActivitySpinner()
+                 self.view.endEditing(true)
                 KeychainWrapper.standard.set(username, forKey: password)
                 performSegue(withIdentifier: "toHome", sender: nil)
             } else {
+                 self.view.endEditing(true)
                 self.stopActivitySpinner()
                 self.userDetailsErrorAlert()
             }
         } else {
             guard let username = usernameTxt.text, let password = passwordTxt.text, usernameTxt.text != "", passwordTxt.text != "" else {
+                 self.view.endEditing(true)
                 self.stopActivitySpinner()
                 self.userNotExistErrorAlert()
                 return
             }
             if username == KeychainWrapper.standard.string(forKey: password) {
+                 self.view.endEditing(true)
                 self.stopActivitySpinner()
                 performSegue(withIdentifier: "toHome", sender: nil)
             }

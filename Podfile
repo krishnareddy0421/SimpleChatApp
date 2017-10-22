@@ -4,6 +4,5 @@ target 'SimpleChatApp' do
   use_frameworks!
 
 pod 'SwiftKeychainWrapper'
-pod 'TwicketSegmentedControl'
 
 end

@@ -137,13 +137,52 @@
                     <view key="view" contentMode="scaleToFill" id="KXB-NE-kdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7E-3E-Fmj" customClass="TwicketSegmentedControl" customModule="SimpleChatApp" customModuleProvider="target">
+                                <rect key="frame" x="28.5" y="45" width="318.5" height="46.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j6Z-B3-vmh">
+                                <rect key="frame" x="3" y="100" width="369" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.66666668650000005" green="0.0" blue="0.037405119600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" rowHeight="100" id="wZU-W4-gDV" customClass="PeopleCell" customModule="SimpleChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="369" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wZU-W4-gDV" id="IsA-Tu-kFa">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j6Z-B3-vmh" secondAttribute="trailing" constant="3" id="Waj-ob-kre"/>
+                            <constraint firstItem="j6Z-B3-vmh" firstAttribute="leading" secondItem="u7s-XJ-5b4" secondAttribute="leading" constant="3" id="dJN-zz-TMu"/>
+                            <constraint firstItem="j6Z-B3-vmh" firstAttribute="height" secondItem="KXB-NE-kdI" secondAttribute="height" multiplier="0.85" id="vCk-fj-hwd"/>
+                            <constraint firstItem="j6Z-B3-vmh" firstAttribute="bottom" secondItem="u7s-XJ-5b4" secondAttribute="bottom" id="yWp-r7-bpt"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="u7s-XJ-5b4"/>
                     </view>
+                    <connections>
+                        <outlet property="customSegmentCntrl" destination="R7E-3E-Fmj" id="cyj-Sm-C8p"/>
+                        <outlet property="tableView" destination="j6Z-B3-vmh" id="TzQ-NI-Hdj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H3y-Jk-d1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-302" y="33"/>
+            <point key="canvasLocation" x="-303.19999999999999" y="32.833583208395808"/>
         </scene>
     </scenes>
 </document>

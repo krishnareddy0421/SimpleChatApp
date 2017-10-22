@@ -7,126 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08D3A83B13DF54BE9BDC0B0F22232081 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A6F2693A1686B180AFD456E2562049 /* KeychainWrapper.swift */; };
-		16981A1FCD8273142CBB73B0E226BD4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		2902A39D4BC9B6C8E8B406DCC020B74C /* TwicketSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6A253BB9183D2E064B8B3B0AE873D3 /* TwicketSegmentedControl-dummy.m */; };
-		3928A9D65BE8E708B3439A4D19696BAD /* Pods-SimpleChatApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B22E2316C06A82DA72BECE2B8D0A263 /* Pods-SimpleChatApp-dummy.m */; };
-		3BA82925A1CEF93BDD89734AA1BA8233 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186649E72FA140C6433F0B729F807FAE /* KeychainItemAccessibility.swift */; };
-		519CB21CC0D3B948E06748E591BB40A7 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1581E229C67722F6C670DDDFB5B75023 /* UIViewShadowExtension.swift */; };
-		5A4C1B9CC1A98F0396A3B13F3041332A /* TwicketSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 00B59FC994A75092D981F9945CE160F7 /* TwicketSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F14E3FFAC94E43EC8B921FB74F06E60 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		7D0702F816C60E61B2333B3969B30961 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		8DA714A2B06132846E4C85795E6CABFF /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F5543548CC91A6AB934AF57C2C805B1 /* SwiftKeychainWrapper-dummy.m */; };
-		9717D7702D9629FF17B2292E7BD8343C /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = E49A25335BC62BDF23E7F51794A1CC10 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A3DCC31EFF8E012C7C9D4C5410834347 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68A2972BF72F64F7F001ACB192B17F5E /* Palette.swift */; };
-		B423F8664B22C984B7527987DC8981B5 /* Pods-SimpleChatApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF32696D701B560810ED98CDB35AD7B /* Pods-SimpleChatApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1C2C9931A3742ACE794440426542395 /* TwicketSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B98326640AB187BC50DE7C9A37C1880 /* TwicketSegmentedControl.swift */; };
-		FB13030B7C41D6B4CAC90BB0D9A18E0E /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A8BEFBCE3A911146A08678FCE78EB8 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F700A68C3A9F81CE39A1258DB36AE6 /* Pods-SimpleChatApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B22E2316C06A82DA72BECE2B8D0A263 /* Pods-SimpleChatApp-dummy.m */; };
+		36E8685960CC02AEE767BADD7B5C4BB2 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */; };
+		395616C1A07436840971F136313AE4AD /* Pods-SimpleChatApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF32696D701B560810ED98CDB35AD7B /* Pods-SimpleChatApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A3270283E145B93DCF6C118ED256708 /* SwiftKeychainWrapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A45F17AB10A2E847D4E4B5D6644878 /* SwiftKeychainWrapper-dummy.m */; };
+		484DD495F37DFE54CAD82E24976237F6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		A106C8E948F57B04AB0534FA947B5772 /* SwiftKeychainWrapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5640FCC51E59D41C3E4D69C3E27FF191 /* SwiftKeychainWrapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA6C0C9AA7607A7FF23F845481871CC8 /* SwiftKeychainWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2D5CE14003B9FC7CC3EFB5B5EA17CEA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E6723AFE4CF20F68C21DC3F6D67F0B33 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0ED79948067979F11DFA5ECF6D412AE6 /* PBXContainerItemProxy */ = {
+		D030E3C4469A795FFDCFB2484474017E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9E7051E983062D0D85A72E4FEC5ECDBA;
-			remoteInfo = TwicketSegmentedControl;
-		};
-		9AF855649B173BE6B6D63E91BCB96B6B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A9EB44CFC551BB4931522FF36528E041;
+			remoteGlobalIDString = 9DD77ADCB9ED3D0FBCB0EC341571EF30;
 			remoteInfo = SwiftKeychainWrapper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00B59FC994A75092D981F9945CE160F7 /* TwicketSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwicketSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
 		018D6B90028B7151BDD5789B4750297A /* Pods-SimpleChatApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleChatApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		0E6A253BB9183D2E064B8B3B0AE873D3 /* TwicketSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TwicketSegmentedControl-dummy.m"; sourceTree = "<group>"; };
-		1581E229C67722F6C670DDDFB5B75023 /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIViewShadowExtension.swift; path = TwicketSegmentedControl/UIViewShadowExtension.swift; sourceTree = "<group>"; };
-		186649E72FA140C6433F0B729F807FAE /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
 		2B22E2316C06A82DA72BECE2B8D0A263 /* Pods-SimpleChatApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleChatApp-dummy.m"; sourceTree = "<group>"; };
-		2EE31FECD456F581EE0FA1A636A77C66 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F5543548CC91A6AB934AF57C2C805B1 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
-		312AB9731C53AADF9CB71B1F001C2FF6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		352F2BE3C0C7DDF3E6D771F751E99649 /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 		358BD06A15FAFC43B97651D8984EC2D2 /* Pods-SimpleChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleChatApp.release.xcconfig"; sourceTree = "<group>"; };
-		3FE2EA607D27B45A8EE30C712D1D4BB3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4053131BCF90DAD7625ED5A43035CEE5 /* Pods-SimpleChatApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleChatApp-frameworks.sh"; sourceTree = "<group>"; };
-		5C850128E05B5E29B8892B5775219EE4 /* TwicketSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TwicketSegmentedControl.framework; path = TwicketSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FDBE97CE745FE26303D2FE7154373FB /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		449FEAE8CB61E14859E6876EABF97D7B /* Pods_SimpleChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleChatApp.framework; path = "Pods-SimpleChatApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5640FCC51E59D41C3E4D69C3E27FF191 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
+		5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainItemAccessibility.swift; path = SwiftKeychainWrapper/KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		62A45F17AB10A2E847D4E4B5D6644878 /* SwiftKeychainWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftKeychainWrapper-dummy.m"; sourceTree = "<group>"; };
 		65AFEA35381DF2163A736E6FF4CF1CA0 /* Pods-SimpleChatApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleChatApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68A2972BF72F64F7F001ACB192B17F5E /* Palette.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Palette.swift; path = TwicketSegmentedControl/Palette.swift; sourceTree = "<group>"; };
 		6B19ED32904A763964B89C597E14BE84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71E1D54AAFCCD4979E64CD1480B54BCC /* Pods-SimpleChatApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-SimpleChatApp.modulemap"; sourceTree = "<group>"; };
-		7B98326640AB187BC50DE7C9A37C1880 /* TwicketSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwicketSegmentedControl.swift; path = TwicketSegmentedControl/TwicketSegmentedControl.swift; sourceTree = "<group>"; };
 		7EF32696D701B560810ED98CDB35AD7B /* Pods-SimpleChatApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleChatApp-umbrella.h"; sourceTree = "<group>"; };
+		846C0F0B1431A818285C4D64B1545729 /* SwiftKeychainWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-prefix.pch"; sourceTree = "<group>"; };
+		92E1072F7CEC7F54F59F04EE47053F22 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93A6F2693A1686B180AFD456E2562049 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
-		AA9F7139D695C66DA006FF1D454F729D /* Pods_SimpleChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleChatApp.framework; path = "Pods-SimpleChatApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC7713FB4A2CEDDB294F440BDD51A2A /* Pods-SimpleChatApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleChatApp-resources.sh"; sourceTree = "<group>"; };
-		B1378B848CD06705495F467D99906B74 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
-		B358216F72D8931CAEEEBAB0A4FD99FF /* TwicketSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = TwicketSegmentedControl.modulemap; sourceTree = "<group>"; };
+		B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
 		BC73777E88B777C2A20F04EA3657AC74 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
-		C159F598F9044AE5D9D3211B49872AEE /* TwicketSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwicketSegmentedControl.xcconfig; sourceTree = "<group>"; };
-		E49A25335BC62BDF23E7F51794A1CC10 /* SwiftKeychainWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftKeychainWrapper.h; path = SwiftKeychainWrapper/SwiftKeychainWrapper.h; sourceTree = "<group>"; };
-		EAE574D7D15823C5CF872DFDD6765C49 /* TwicketSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwicketSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
-		F4A8BEFBCE3A911146A08678FCE78EB8 /* SwiftKeychainWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftKeychainWrapper-umbrella.h"; sourceTree = "<group>"; };
+		D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeychainWrapper.swift; path = SwiftKeychainWrapper/KeychainWrapper.swift; sourceTree = "<group>"; };
+		E52F6052576065CA7C362375C983B051 /* SwiftKeychainWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftKeychainWrapper.framework; path = SwiftKeychainWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F194D311B8B315AF5F4F433CF65096C0 /* SwiftKeychainWrapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftKeychainWrapper.xcconfig; sourceTree = "<group>"; };
+		F3B324AE3700C160B4A7A8497FC6F27D /* SwiftKeychainWrapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftKeychainWrapper.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3079471FFB9811C2A6EA98652840D639 /* Frameworks */ = {
+		1A0F4334746799470B5CE078D404F6AC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D0702F816C60E61B2333B3969B30961 /* Foundation.framework in Frameworks */,
+				484DD495F37DFE54CAD82E24976237F6 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A142A4A66EE7152359A2106AAA02522 /* Frameworks */ = {
+		51B97648BA9123A7E1E1FB261D90C99C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16981A1FCD8273142CBB73B0E226BD4A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CF390535FDA7DA17F533D4701D69C594 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6F14E3FFAC94E43EC8B921FB74F06E60 /* Foundation.framework in Frameworks */,
+				C2D5CE14003B9FC7CC3EFB5B5EA17CEA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F06606FD3730DADD491A68BE7A4D8A3 /* TwicketSegmentedControl */ = {
-			isa = PBXGroup;
-			children = (
-				68A2972BF72F64F7F001ACB192B17F5E /* Palette.swift */,
-				7B98326640AB187BC50DE7C9A37C1880 /* TwicketSegmentedControl.swift */,
-				1581E229C67722F6C670DDDFB5B75023 /* UIViewShadowExtension.swift */,
-				D91A2CCDA28651DBFB18B35C57DEFF33 /* Support Files */,
-			);
-			name = TwicketSegmentedControl;
-			path = TwicketSegmentedControl;
-			sourceTree = "<group>";
-		};
-		113C5782CBC8D2989DEE4C7C21FB920B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AA9F7139D695C66DA006FF1D454F729D /* Pods_SimpleChatApp.framework */,
-				2EE31FECD456F581EE0FA1A636A77C66 /* SwiftKeychainWrapper.framework */,
-				5C850128E05B5E29B8892B5775219EE4 /* TwicketSegmentedControl.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		219777A43C8EE5EFDFA07C8F01CF851A /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,25 +82,18 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		21B53A64EF0EF9A1C0D278C8A283F751 /* SwiftKeychainWrapper */ = {
+		6480D6626D4CBD1A4695A4864A832D69 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				186649E72FA140C6433F0B729F807FAE /* KeychainItemAccessibility.swift */,
-				93A6F2693A1686B180AFD456E2562049 /* KeychainWrapper.swift */,
-				E49A25335BC62BDF23E7F51794A1CC10 /* SwiftKeychainWrapper.h */,
-				F43E317A3D3B07EDDDDDA68205E521E2 /* Support Files */,
+				92E1072F7CEC7F54F59F04EE47053F22 /* Info.plist */,
+				F3B324AE3700C160B4A7A8497FC6F27D /* SwiftKeychainWrapper.modulemap */,
+				F194D311B8B315AF5F4F433CF65096C0 /* SwiftKeychainWrapper.xcconfig */,
+				62A45F17AB10A2E847D4E4B5D6644878 /* SwiftKeychainWrapper-dummy.m */,
+				846C0F0B1431A818285C4D64B1545729 /* SwiftKeychainWrapper-prefix.pch */,
+				5640FCC51E59D41C3E4D69C3E27FF191 /* SwiftKeychainWrapper-umbrella.h */,
 			);
-			name = SwiftKeychainWrapper;
-			path = SwiftKeychainWrapper;
-			sourceTree = "<group>";
-		};
-		7A880D3E248F23A5E78DE2F1AEAD4DB3 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				21B53A64EF0EF9A1C0D278C8A283F751 /* SwiftKeychainWrapper */,
-				0F06606FD3730DADD491A68BE7A4D8A3 /* TwicketSegmentedControl */,
-			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -161,10 +101,39 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				7A880D3E248F23A5E78DE2F1AEAD4DB3 /* Pods */,
-				113C5782CBC8D2989DEE4C7C21FB920B /* Products */,
+				A0DC98CF63826F78B027F4AD3A6E1A4D /* Pods */,
+				A4E0F88A0C7E90A5DFC5E1B6AC905684 /* Products */,
 				219777A43C8EE5EFDFA07C8F01CF851A /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		A0DC98CF63826F78B027F4AD3A6E1A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0CAC6EA9F0C2F55BADB6FB344332372 /* SwiftKeychainWrapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A4E0F88A0C7E90A5DFC5E1B6AC905684 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				449FEAE8CB61E14859E6876EABF97D7B /* Pods_SimpleChatApp.framework */,
+				E52F6052576065CA7C362375C983B051 /* SwiftKeychainWrapper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0CAC6EA9F0C2F55BADB6FB344332372 /* SwiftKeychainWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				5A21F52E816D401B1E03FCC639291FDF /* KeychainItemAccessibility.swift */,
+				D02DE889CB219027DCFB3F28689F86D7 /* KeychainWrapper.swift */,
+				B1A90FBA3C2B1F114C7F29C2C41D5389 /* SwiftKeychainWrapper.h */,
+				6480D6626D4CBD1A4695A4864A832D69 /* Support Files */,
+			);
+			name = SwiftKeychainWrapper;
+			path = SwiftKeychainWrapper;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -181,34 +150,6 @@
 				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		D91A2CCDA28651DBFB18B35C57DEFF33 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3FE2EA607D27B45A8EE30C712D1D4BB3 /* Info.plist */,
-				B358216F72D8931CAEEEBAB0A4FD99FF /* TwicketSegmentedControl.modulemap */,
-				C159F598F9044AE5D9D3211B49872AEE /* TwicketSegmentedControl.xcconfig */,
-				0E6A253BB9183D2E064B8B3B0AE873D3 /* TwicketSegmentedControl-dummy.m */,
-				EAE574D7D15823C5CF872DFDD6765C49 /* TwicketSegmentedControl-prefix.pch */,
-				00B59FC994A75092D981F9945CE160F7 /* TwicketSegmentedControl-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/TwicketSegmentedControl";
-			sourceTree = "<group>";
-		};
-		F43E317A3D3B07EDDDDDA68205E521E2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				312AB9731C53AADF9CB71B1F001C2FF6 /* Info.plist */,
-				352F2BE3C0C7DDF3E6D771F751E99649 /* SwiftKeychainWrapper.modulemap */,
-				B1378B848CD06705495F467D99906B74 /* SwiftKeychainWrapper.xcconfig */,
-				2F5543548CC91A6AB934AF57C2C805B1 /* SwiftKeychainWrapper-dummy.m */,
-				5FDBE97CE745FE26303D2FE7154373FB /* SwiftKeychainWrapper-prefix.pch */,
-				F4A8BEFBCE3A911146A08678FCE78EB8 /* SwiftKeychainWrapper-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftKeychainWrapper";
 			sourceTree = "<group>";
 		};
 		FF4D6A9AE87753C144D2594C889FC1D2 /* Pods-SimpleChatApp */ = {
@@ -232,77 +173,51 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6D119CB4D3894C473271F8F184599599 /* Headers */ = {
+		39E5C7D11976BE16D8A38537015A90F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A4C1B9CC1A98F0396A3B13F3041332A /* TwicketSegmentedControl-umbrella.h in Headers */,
+				395616C1A07436840971F136313AE4AD /* Pods-SimpleChatApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0B06AC177E191585E2CB5DD48EC3A79 /* Headers */ = {
+		4A68B61DB55707637141D2D56C5D647C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB13030B7C41D6B4CAC90BB0D9A18E0E /* SwiftKeychainWrapper-umbrella.h in Headers */,
-				9717D7702D9629FF17B2292E7BD8343C /* SwiftKeychainWrapper.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D95270FEDBE1F1934B1F04C6B0E641C5 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B423F8664B22C984B7527987DC8981B5 /* Pods-SimpleChatApp-umbrella.h in Headers */,
+				A106C8E948F57B04AB0534FA947B5772 /* SwiftKeychainWrapper-umbrella.h in Headers */,
+				AA6C0C9AA7607A7FF23F845481871CC8 /* SwiftKeychainWrapper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8123CCF435B0FEF5714FCADCC2EDC39D /* Pods-SimpleChatApp */ = {
+		95EFCD978B24469F7A6ACA9AE82F84D6 /* Pods-SimpleChatApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9D3BE644F43249677B9B45FF2E74B7D6 /* Build configuration list for PBXNativeTarget "Pods-SimpleChatApp" */;
+			buildConfigurationList = 09A3371B6AF9031ADC8FFFC90F684435 /* Build configuration list for PBXNativeTarget "Pods-SimpleChatApp" */;
 			buildPhases = (
-				E4D649AA4E9E067DA24F106B0F06585D /* Sources */,
-				7A142A4A66EE7152359A2106AAA02522 /* Frameworks */,
-				D95270FEDBE1F1934B1F04C6B0E641C5 /* Headers */,
+				8F6A9EE30DBB642BB221D9AFC8778DD3 /* Sources */,
+				1A0F4334746799470B5CE078D404F6AC /* Frameworks */,
+				39E5C7D11976BE16D8A38537015A90F5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				62083BD9C1E906F750F929ED40407405 /* PBXTargetDependency */,
-				75310A4FCE3864F8D8DBC32A69D7F260 /* PBXTargetDependency */,
+				C2B626A8CA5C7E3601A6D84321B8CA50 /* PBXTargetDependency */,
 			);
 			name = "Pods-SimpleChatApp";
 			productName = "Pods-SimpleChatApp";
-			productReference = AA9F7139D695C66DA006FF1D454F729D /* Pods_SimpleChatApp.framework */;
+			productReference = 449FEAE8CB61E14859E6876EABF97D7B /* Pods_SimpleChatApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9E7051E983062D0D85A72E4FEC5ECDBA /* TwicketSegmentedControl */ = {
+		9DD77ADCB9ED3D0FBCB0EC341571EF30 /* SwiftKeychainWrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8FE18D86F5A77E240AC79B2995469120 /* Build configuration list for PBXNativeTarget "TwicketSegmentedControl" */;
+			buildConfigurationList = 5BEF278D830A0E3CFC5373BEDC1A5419 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
 			buildPhases = (
-				C126A19B7FFFE38D46F23A810953FCAA /* Sources */,
-				3079471FFB9811C2A6EA98652840D639 /* Frameworks */,
-				6D119CB4D3894C473271F8F184599599 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = TwicketSegmentedControl;
-			productName = TwicketSegmentedControl;
-			productReference = 5C850128E05B5E29B8892B5775219EE4 /* TwicketSegmentedControl.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		A9EB44CFC551BB4931522FF36528E041 /* SwiftKeychainWrapper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0A391DBDAF46F590EDB623DE014DC8B8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */;
-			buildPhases = (
-				ADC01880BB3D521760657A0C6D9EE619 /* Sources */,
-				CF390535FDA7DA17F533D4701D69C594 /* Frameworks */,
-				D0B06AC177E191585E2CB5DD48EC3A79 /* Headers */,
+				A31F5D5F3421C3F6E3E897887CF11A2E /* Sources */,
+				51B97648BA9123A7E1E1FB261D90C99C /* Frameworks */,
+				4A68B61DB55707637141D2D56C5D647C /* Headers */,
 			);
 			buildRules = (
 			);
@@ -310,7 +225,7 @@
 			);
 			name = SwiftKeychainWrapper;
 			productName = SwiftKeychainWrapper;
-			productReference = 2EE31FECD456F581EE0FA1A636A77C66 /* SwiftKeychainWrapper.framework */;
+			productReference = E52F6052576065CA7C362375C983B051 /* SwiftKeychainWrapper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -330,65 +245,113 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 113C5782CBC8D2989DEE4C7C21FB920B /* Products */;
+			productRefGroup = A4E0F88A0C7E90A5DFC5E1B6AC905684 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8123CCF435B0FEF5714FCADCC2EDC39D /* Pods-SimpleChatApp */,
-				A9EB44CFC551BB4931522FF36528E041 /* SwiftKeychainWrapper */,
-				9E7051E983062D0D85A72E4FEC5ECDBA /* TwicketSegmentedControl */,
+				95EFCD978B24469F7A6ACA9AE82F84D6 /* Pods-SimpleChatApp */,
+				9DD77ADCB9ED3D0FBCB0EC341571EF30 /* SwiftKeychainWrapper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ADC01880BB3D521760657A0C6D9EE619 /* Sources */ = {
+		8F6A9EE30DBB642BB221D9AFC8778DD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BA82925A1CEF93BDD89734AA1BA8233 /* KeychainItemAccessibility.swift in Sources */,
-				08D3A83B13DF54BE9BDC0B0F22232081 /* KeychainWrapper.swift in Sources */,
-				8DA714A2B06132846E4C85795E6CABFF /* SwiftKeychainWrapper-dummy.m in Sources */,
+				10F700A68C3A9F81CE39A1258DB36AE6 /* Pods-SimpleChatApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C126A19B7FFFE38D46F23A810953FCAA /* Sources */ = {
+		A31F5D5F3421C3F6E3E897887CF11A2E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3DCC31EFF8E012C7C9D4C5410834347 /* Palette.swift in Sources */,
-				2902A39D4BC9B6C8E8B406DCC020B74C /* TwicketSegmentedControl-dummy.m in Sources */,
-				D1C2C9931A3742ACE794440426542395 /* TwicketSegmentedControl.swift in Sources */,
-				519CB21CC0D3B948E06748E591BB40A7 /* UIViewShadowExtension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E4D649AA4E9E067DA24F106B0F06585D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3928A9D65BE8E708B3439A4D19696BAD /* Pods-SimpleChatApp-dummy.m in Sources */,
+				E6723AFE4CF20F68C21DC3F6D67F0B33 /* KeychainItemAccessibility.swift in Sources */,
+				36E8685960CC02AEE767BADD7B5C4BB2 /* KeychainWrapper.swift in Sources */,
+				3A3270283E145B93DCF6C118ED256708 /* SwiftKeychainWrapper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		62083BD9C1E906F750F929ED40407405 /* PBXTargetDependency */ = {
+		C2B626A8CA5C7E3601A6D84321B8CA50 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftKeychainWrapper;
-			target = A9EB44CFC551BB4931522FF36528E041 /* SwiftKeychainWrapper */;
-			targetProxy = 9AF855649B173BE6B6D63E91BCB96B6B /* PBXContainerItemProxy */;
-		};
-		75310A4FCE3864F8D8DBC32A69D7F260 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = TwicketSegmentedControl;
-			target = 9E7051E983062D0D85A72E4FEC5ECDBA /* TwicketSegmentedControl */;
-			targetProxy = 0ED79948067979F11DFA5ECF6D412AE6 /* PBXContainerItemProxy */;
+			target = 9DD77ADCB9ED3D0FBCB0EC341571EF30 /* SwiftKeychainWrapper */;
+			targetProxy = D030E3C4469A795FFDCFB2484474017E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0E48E2D0BAE7A48F77E6ACFA2C9EAABD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC73777E88B777C2A20F04EA3657AC74 /* Pods-SimpleChatApp.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SimpleChatApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SimpleChatApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0EF6083AE8AB47DA5D3463CDF4C657D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F194D311B8B315AF5F4F433CF65096C0 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		12C4B864767C59600DBFA238F1E2F8BC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -443,68 +406,6 @@
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
-		};
-		2C46373B8D653F4B4D34FB76CAE75874 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C159F598F9044AE5D9D3211B49872AEE /* TwicketSegmentedControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TwicketSegmentedControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl.modulemap";
-				PRODUCT_NAME = TwicketSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		34C5206E61AF0A26CB67F7555D017471 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1378B848CD06705495F467D99906B74 /* SwiftKeychainWrapper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		59F0302F2371FCC6B73EF0A418D40734 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -566,105 +467,7 @@
 			};
 			name = Debug;
 		};
-		9FF0E6AE31FDD3525C547A03FEE2366B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC73777E88B777C2A20F04EA3657AC74 /* Pods-SimpleChatApp.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SimpleChatApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_SimpleChatApp;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C077C647898657EBE6A178CD0E66201F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1378B848CD06705495F467D99906B74 /* SwiftKeychainWrapper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
-				PRODUCT_NAME = SwiftKeychainWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CB1DE1886A8C6098A1925D4D489FE740 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C159F598F9044AE5D9D3211B49872AEE /* TwicketSegmentedControl.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TwicketSegmentedControl/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/TwicketSegmentedControl/TwicketSegmentedControl.modulemap";
-				PRODUCT_NAME = TwicketSegmentedControl;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D8EA9AA2AAB1B712D6ED434F3F3C7A28 /* Release */ = {
+		8F6D9279B31D60C4F86C918F680CA1F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 358BD06A15FAFC43B97651D8984EC2D2 /* Pods-SimpleChatApp.release.xcconfig */;
 			buildSettings = {
@@ -698,14 +501,45 @@
 			};
 			name = Release;
 		};
+		B77D5A5F7579C9E485BA9883629CAA05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F194D311B8B315AF5F4F433CF65096C0 /* SwiftKeychainWrapper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftKeychainWrapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftKeychainWrapper/SwiftKeychainWrapper.modulemap";
+				PRODUCT_NAME = SwiftKeychainWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0A391DBDAF46F590EDB623DE014DC8B8 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
+		09A3371B6AF9031ADC8FFFC90F684435 /* Build configuration list for PBXNativeTarget "Pods-SimpleChatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34C5206E61AF0A26CB67F7555D017471 /* Debug */,
-				C077C647898657EBE6A178CD0E66201F /* Release */,
+				0E48E2D0BAE7A48F77E6ACFA2C9EAABD /* Debug */,
+				8F6D9279B31D60C4F86C918F680CA1F0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -719,20 +553,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8FE18D86F5A77E240AC79B2995469120 /* Build configuration list for PBXNativeTarget "TwicketSegmentedControl" */ = {
+		5BEF278D830A0E3CFC5373BEDC1A5419 /* Build configuration list for PBXNativeTarget "SwiftKeychainWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2C46373B8D653F4B4D34FB76CAE75874 /* Debug */,
-				CB1DE1886A8C6098A1925D4D489FE740 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9D3BE644F43249677B9B45FF2E74B7D6 /* Build configuration list for PBXNativeTarget "Pods-SimpleChatApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9FF0E6AE31FDD3525C547A03FEE2366B /* Debug */,
-				D8EA9AA2AAB1B712D6ED434F3F3C7A28 /* Release */,
+				B77D5A5F7579C9E485BA9883629CAA05 /* Debug */,
+				0EF6083AE8AB47DA5D3463CDF4C657D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
