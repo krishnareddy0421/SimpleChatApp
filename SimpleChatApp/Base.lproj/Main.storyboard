@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Lav-Zz-if1">
-                                <rect key="frame" x="56.5" y="192.5" width="262.5" height="149"/>
+                                <rect key="frame" x="56.5" y="166" width="262.5" height="202"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="LR0-C3-AVY">
                                         <rect key="frame" x="0.0" y="0.0" width="262.5" height="43"/>
@@ -44,20 +44,28 @@
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PHw-8b-0JN">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="a23-7E-UMc">
                                         <rect key="frame" x="0.0" y="53" width="262.5" height="43"/>
+                                        <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="PHw-8b-0JN">
+                                        <rect key="frame" x="0.0" y="106" width="262.5" height="43"/>
                                         <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="confirm password" textAlignment="natural" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="leY-j0-ImH">
-                                        <rect key="frame" x="0.0" y="106" width="262.5" height="43"/>
+                                        <rect key="frame" x="0.0" y="159" width="262.5" height="43"/>
                                         <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="a23-7E-UMc" firstAttribute="width" secondItem="LR0-C3-AVY" secondAttribute="width" id="Fno-OZ-NvC"/>
+                                    <constraint firstItem="a23-7E-UMc" firstAttribute="height" secondItem="LR0-C3-AVY" secondAttribute="height" id="NzB-GS-Vjh"/>
                                     <constraint firstItem="PHw-8b-0JN" firstAttribute="width" secondItem="LR0-C3-AVY" secondAttribute="width" id="ScD-Ye-f3v"/>
                                     <constraint firstItem="PHw-8b-0JN" firstAttribute="height" secondItem="LR0-C3-AVY" secondAttribute="height" id="bqo-Vp-72h"/>
                                     <constraint firstItem="leY-j0-ImH" firstAttribute="height" secondItem="LR0-C3-AVY" secondAttribute="height" id="n6r-Cp-I9W"/>
@@ -65,7 +73,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A18-8D-jZa">
-                                <rect key="frame" x="56.5" y="357" width="262.5" height="53"/>
+                                <rect key="frame" x="56.5" y="373.5" width="262.5" height="53"/>
                                 <color key="backgroundColor" red="0.19200111040609136" green="0.10748957905956363" blue="0.049868403344964701" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
                                 <state key="normal" title="Sign Up">
@@ -101,7 +109,7 @@
                             <constraint firstItem="XTr-2H-LUR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.35" id="64B-et-AKl"/>
                             <constraint firstItem="A18-8D-jZa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="Db6-F1-Hyw"/>
                             <constraint firstItem="A18-8D-jZa" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.08" id="I04-kf-kn3"/>
-                            <constraint firstItem="A18-8D-jZa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.15" id="KiB-0R-fyt"/>
+                            <constraint firstItem="A18-8D-jZa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.2" id="KiB-0R-fyt"/>
                             <constraint firstItem="Lav-Zz-if1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MrL-jl-6aV"/>
                             <constraint firstItem="5aJ-eQ-AN0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qh9-8k-lNN"/>
                             <constraint firstItem="XTr-2H-LUR" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="Qhy-18-ylZ"/>
@@ -120,6 +128,7 @@
                     <connections>
                         <outlet property="activitySpinner" destination="5aJ-eQ-AN0" id="KNd-NB-Jfj"/>
                         <outlet property="confPasswordTxt" destination="leY-j0-ImH" id="Epx-9u-OWP"/>
+                        <outlet property="emailTxt" destination="a23-7E-UMc" id="kDC-0S-MiR"/>
                         <outlet property="passwordTxt" destination="PHw-8b-0JN" id="Mgg-Ql-Ryw"/>
                         <outlet property="signupLoginBtn" destination="A18-8D-jZa" id="TT0-Q2-ykt"/>
                         <outlet property="usernameTxt" destination="LR0-C3-AVY" id="PBf-H2-zCQ"/>
