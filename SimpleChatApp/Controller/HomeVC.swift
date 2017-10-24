@@ -8,49 +8,43 @@
 
 import UIKit
 
-class HomeVC: UIViewController, UITableViewDelegate, UITableViewDataSource, TwicketSegmentedControlDelegate  {
+class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
 
     // MARK: - Outlets
     @IBOutlet weak var customSegmentCntrl: TwicketSegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var sectionTitleLbl: UILabel!
+    
+    // MARK: - Container View Outlets
+    @IBOutlet weak var searchContainerView: UIView!
+    @IBOutlet weak var peopleContainerView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let sectionTitles = ["Chats", "People", "Search"]
         customSegmentCntrl.setSegmentItems(sectionTitles)
-        
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.sectionTitleLbl.text = "Recent Chats"
         customSegmentCntrl.delegate = self
+        self.searchContainerView.isHidden = true
+        self.peopleContainerView.isHidden = true
     }
 
     func didSelect(_ segmentIndex: Int) {
         switch segmentIndex {
         case 0:
-            print("Chats")
+            self.sectionTitleLbl.text = "Recent Chats"
+            self.peopleContainerView.isHidden = true
+            self.searchContainerView.isHidden = true
         case 1:
-            print("People")
+            self.sectionTitleLbl.text = "People"
+            self.peopleContainerView.isHidden = false
+            self.searchContainerView.isHidden = true
         case 2:
-            print("Search")
+            self.sectionTitleLbl.text = "Search for people"
+            self.peopleContainerView.isHidden = true
+            self.searchContainerView.isHidden = false
         default:
-            print("Chats")
-        }
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath) as? PeopleCell {
-            
-            return cell
-        } else {
-            return UITableViewCell()
+            self.sectionTitleLbl.text = "Recent Chats"
         }
     }
 }

@@ -30,7 +30,7 @@ class LoginVC: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func setupLoginBtnPressed(_ sender: UIButton) {
+    @IBAction func signUpLoginBtnPressed(_ sender: UIButton) {
         self.startActivitySpinner()
         if sender.titleLabel?.text == "Sign Up" {
             guard let username = usernameTxt.text, let email = emailTxt.text, let password = passwordTxt.text, let confPassword = confPasswordTxt.text, usernameTxt.text != "", emailTxt.text != "", passwordTxt.text != "", confPasswordTxt.text != "" else {
@@ -42,16 +42,19 @@ class LoginVC: UIViewController {
             if password == confPassword {
                 Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
                     if error != nil {
-                        self.userDetailsErrorAlert()
+                        self.stopActivitySpinner()
+                        self.userEmailAlreadyExistsErrorAlert()
                         return
                     }
                     self.stopActivitySpinner()
                     self.view.endEditing(true)
                     guard let userId = user?.uid else {
+                        self.stopActivitySpinner()
                         self.userDetailsErrorAlert()
                         return
                     }
-                    DatabaseService.instance.saveUserData(userID: userId, userName: username, userEmail: email, userPassword: password, completion: { (success) in
+                    DatabaseService.instance.userUID = userId
+                    DatabaseService.instance.saveUserData(userID: userId, userName: username, userEmail: email, completion: { (success) in
                         if success {
                             self.performSegue(withIdentifier: "toHome", sender: nil)
                         } else {
@@ -65,7 +68,7 @@ class LoginVC: UIViewController {
                 self.userDetailsErrorAlert()
             }
         } else {
-            guard let email = emailTxt.text, let password = passwordTxt.text, usernameTxt.text != "", passwordTxt.text != "" else {
+            guard let email = emailTxt.text, let password = passwordTxt.text, emailTxt.text != "", passwordTxt.text != "" else {
                  self.view.endEditing(true)
                 self.stopActivitySpinner()
                 self.userNotExistErrorAlert()
@@ -73,9 +76,16 @@ class LoginVC: UIViewController {
             }
             Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
                 if error != nil {
+                    self.stopActivitySpinner()
                     self.userDetailsErrorAlert()
                     return
                 }
+                guard let userId = user?.uid else {
+                    self.stopActivitySpinner()
+                    self.userDetailsErrorAlert()
+                    return
+                }
+                DatabaseService.instance.userUID = userId
                 self.view.endEditing(true)
                 self.stopActivitySpinner()
                 self.performSegue(withIdentifier: "toHome", sender: nil)
@@ -116,6 +126,13 @@ class LoginVC: UIViewController {
     
     func userNotExistErrorAlert() {
         let alert = UIAlertController.init(title: "Username/Password do not match", message: "Try Again", preferredStyle: .alert)
+        let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancelAtn)
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func userEmailAlreadyExistsErrorAlert() {
+        let alert = UIAlertController.init(title: "Account with this email already exists.", message: "Try with other email", preferredStyle: .alert)
         let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAtn)
         self.present(alert, animated: true, completion: nil)

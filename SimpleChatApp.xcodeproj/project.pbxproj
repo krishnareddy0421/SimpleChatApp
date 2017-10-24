@@ -20,6 +20,9 @@
 		9EACCDC31F9D266700F42BA1 /* UIViewShadowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDC01F9D266700F42BA1 /* UIViewShadowExtension.swift */; };
 		9EACCDC61F9D292200F42BA1 /* PeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */; };
 		9EACCDEA1F9D41E300F42BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9EACCDE81F9D41DA00F42BA1 /* GoogleService-Info.plist */; };
+		9EB0CE4D1F9EEF2B00C3B744 /* PeopleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB0CE4C1F9EEF2B00C3B744 /* PeopleVC.swift */; };
+		9ED50B2A1F9E742200F91585 /* SearchResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED50B291F9E742200F91585 /* SearchResultsVC.swift */; };
+		9ED50B2C1F9E751200F91585 /* SearchPeopleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED50B2B1F9E751200F91585 /* SearchPeopleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		9EACCDC01F9D266700F42BA1 /* UIViewShadowExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewShadowExtension.swift; sourceTree = "<group>"; };
 		9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCell.swift; sourceTree = "<group>"; };
 		9EACCDE81F9D41DA00F42BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9EB0CE4C1F9EEF2B00C3B744 /* PeopleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleVC.swift; sourceTree = "<group>"; };
+		9ED50B291F9E742200F91585 /* SearchResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsVC.swift; sourceTree = "<group>"; };
+		9ED50B2B1F9E751200F91585 /* SearchPeopleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPeopleCell.swift; sourceTree = "<group>"; };
 		B1E4FADDF2F30C3DE2EA2FF5 /* Pods-SimpleChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +110,8 @@
 			children = (
 				9E6C1D591F9D0FA40088CB37 /* LoginVC.swift */,
 				9E6C1D6A1F9D1DB30088CB37 /* HomeVC.swift */,
+				9ED50B291F9E742200F91585 /* SearchResultsVC.swift */,
+				9EB0CE4C1F9EEF2B00C3B744 /* PeopleVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */,
+				9ED50B2B1F9E751200F91585 /* SearchPeopleCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,9 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED50B2C1F9E751200F91585 /* SearchPeopleCell.swift in Sources */,
 				9EACCDC31F9D266700F42BA1 /* UIViewShadowExtension.swift in Sources */,
 				9EACCDC11F9D266700F42BA1 /* TwicketSegmentedControl.swift in Sources */,
 				9EACCDC61F9D292200F42BA1 /* PeopleCell.swift in Sources */,
+				9EB0CE4D1F9EEF2B00C3B744 /* PeopleVC.swift in Sources */,
+				9ED50B2A1F9E742200F91585 /* SearchResultsVC.swift in Sources */,
 				9E6C1D6B1F9D1DB30088CB37 /* HomeVC.swift in Sources */,
 				9EACCDC21F9D266700F42BA1 /* Palette.swift in Sources */,
 				9E6C1D5A1F9D0FA40088CB37 /* LoginVC.swift in Sources */,

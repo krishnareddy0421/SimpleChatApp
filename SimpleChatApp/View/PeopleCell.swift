@@ -10,6 +10,9 @@ import UIKit
 
 class PeopleCell: UITableViewCell {
 
+    // MARK: - Outlets
+    @IBOutlet weak var nameLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
