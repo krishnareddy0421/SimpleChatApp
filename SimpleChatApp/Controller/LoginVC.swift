@@ -53,7 +53,7 @@ class LoginVC: UIViewController {
                         self.userDetailsErrorAlert()
                         return
                     }
-                    DatabaseService.instance.userUID = userId
+                    DatabaseService.instance.userID = userId
                     DatabaseService.instance.saveUserData(userID: userId, userName: username, userEmail: email, completion: { (success) in
                         if success {
                             self.performSegue(withIdentifier: "toHome", sender: nil)
@@ -85,7 +85,7 @@ class LoginVC: UIViewController {
                     self.userDetailsErrorAlert()
                     return
                 }
-                DatabaseService.instance.userUID = userId
+                DatabaseService.instance.userID = userId
                 self.view.endEditing(true)
                 self.stopActivitySpinner()
                 self.performSegue(withIdentifier: "toHome", sender: nil)

@@ -14,7 +14,7 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
-    var friendsArray = [NSDictionary?]()
+    var allUsers = [NSDictionary?]()
     
     let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
     
@@ -23,8 +23,8 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         tableView.delegate = self
         tableView.dataSource = self
         
-        ref.child("chatApp").child("friends").child(DatabaseService.instance.userUID).queryOrdered(byChild: "status").observe(.childAdded, with: { (snapshot) in
-            self.friendsArray.append(snapshot.value as? NSDictionary)
+        ref.child("chatApp").child("users").queryOrdered(byChild: "name").observe(.childAdded, with: { (snapshot) in
+            self.allUsers.append(snapshot.value as? NSDictionary)
             self.tableView.reloadData()
         }) { (error) in
             // error handling
@@ -36,15 +36,15 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friendsArray.count
+        return allUsers.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath) as? PeopleCell {
             let user: NSDictionary?
-            user = friendsArray[indexPath.row]
+            user = allUsers[indexPath.row]
             
-            cell.nameLbl.text = user?["friendUid"] as? String
+            cell.nameLbl.text = user?["name"] as? String
             return cell
         } else {
             return UITableViewCell()
