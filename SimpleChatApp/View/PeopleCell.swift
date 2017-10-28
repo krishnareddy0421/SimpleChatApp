@@ -11,7 +11,10 @@ import UIKit
 class PeopleCell: UITableViewCell {
 
     // MARK: - Outlets
-    @IBOutlet weak var nameLbl: UILabel!
+    @IBOutlet weak var usernameLbl: UILabel!
+    @IBOutlet weak var useremailLbl: UILabel!
     
-    
+    @IBAction func sendMessageBtnPressed(_ sender: Any) {
+        
+    }
 }

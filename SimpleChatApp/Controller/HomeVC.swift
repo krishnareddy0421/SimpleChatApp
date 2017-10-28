@@ -39,8 +39,8 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
             self.peopleContainerView.isHidden = true
         case 1:
             self.sectionTitleLbl.text = "People"
-            self.recentChatsContainerView.isHidden = false
-            self.peopleContainerView.isHidden = true
+            self.recentChatsContainerView.isHidden = true
+            self.peopleContainerView.isHidden = false
         default:
             self.sectionTitleLbl.text = "Recent Chats"
         }

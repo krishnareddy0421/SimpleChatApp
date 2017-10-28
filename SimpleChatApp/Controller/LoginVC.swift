@@ -53,6 +53,7 @@ class LoginVC: UIViewController {
                         self.userDetailsErrorAlert()
                         return
                     }
+                    DatabaseService.instance.userID = uid
                     DatabaseService.instance.saveUserData(userID: uid, userName: username, userEmail: email, completion: { (success) in
                         if success {
                             UserDataService.instance.setUserData(userId: uid, userName: username, userEmail: email)
@@ -83,6 +84,7 @@ class LoginVC: UIViewController {
                 guard let id = user?.uid else {
                     return
                 }
+                DatabaseService.instance.userID = id
                 DatabaseService.instance.getUserData(userID: id, completion: { (success) in
                     if success {
                         self.view.endEditing(true)

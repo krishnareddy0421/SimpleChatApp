@@ -14,6 +14,9 @@ typealias CompletionHandler = (_ Sucess: Bool) -> ()
 class DatabaseService {
     static let instance = DatabaseService()
     
+    var userID: String?
+    var allUsers = [[String: Any]]()
+    
     func saveUserData(userID: String, userName: String, userEmail: String, completion: @escaping CompletionHandler) {
         let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
         let userReference = ref.child("chatApp").child("users").child(userID)
@@ -31,14 +34,53 @@ class DatabaseService {
         let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
         let userReference = ref.child("chatApp").child("users").child(userID)
         userReference.observe(.value, with: { (snapshot) in
-            if let dictionary = snapshot.value as? [String: AnyObject] {
-                guard let name = dictionary["name"] as? String else { return }
-                guard let email = dictionary["email"] as? String else { return }
-                guard let id = dictionary["id"] as? String else { return }
+            if let user = snapshot.value as? [String: AnyObject] {
+                guard let name = user["name"] as? String else {
+                    completion(false)
+                    return
+                }
+                guard let email = user["email"] as? String else {
+                    completion(false)
+                    return
+                }
+                guard let id = user["id"] as? String else {
+                    completion(false)
+                    return
+                }
                 
                 UserDataService.instance.setUserData(userId: id, userName: name, userEmail: email)
                 completion(true)
+            } else {
+                completion(false)
             }
+        }, withCancel: nil)
+    }
+    
+    func getAllUsers(completion: @escaping CompletionHandler) {
+        self.allUsers.removeAll()
+        let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
+        let userReference = ref.child("chatApp").child("users")
+        userReference.observe(.childAdded, with: { (snapshot) in
+            if let user = snapshot.value as? [String: Any] {
+                if user["id"] as? String != self.userID {
+                    guard let name = user["name"] as? String else {
+                        completion(false)
+                        return
+                    }
+                    guard let email = user["email"] as? String else {
+                        completion(false)
+                        return
+                    }
+                    guard let id = user["id"] as? String else {
+                        completion(false)
+                        return
+                    }
+                    
+                    let values = ["userId": id, "username": name, "useremail": email]
+                    self.allUsers.append(values)
+                }
+            }
+            completion(true)
         }, withCancel: nil)
     }
 }
