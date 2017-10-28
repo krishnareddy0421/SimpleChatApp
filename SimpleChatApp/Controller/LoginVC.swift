@@ -48,14 +48,14 @@ class LoginVC: UIViewController {
                     }
                     self.stopActivitySpinner()
                     self.view.endEditing(true)
-                    guard let userId = user?.uid else {
+                    guard let uid = user?.uid else {
                         self.stopActivitySpinner()
                         self.userDetailsErrorAlert()
                         return
                     }
-                    DatabaseService.instance.userID = userId
-                    DatabaseService.instance.saveUserData(userID: userId, userName: username, userEmail: email, completion: { (success) in
+                    DatabaseService.instance.saveUserData(userID: uid, userName: username, userEmail: email, completion: { (success) in
                         if success {
+                            UserDataService.instance.setUserData(userId: uid, userName: username, userEmail: email)
                             self.performSegue(withIdentifier: "toHome", sender: nil)
                         } else {
                             self.userDetailsErrorAlert()
@@ -80,15 +80,18 @@ class LoginVC: UIViewController {
                     self.userDetailsErrorAlert()
                     return
                 }
-                guard let userId = user?.uid else {
-                    self.stopActivitySpinner()
-                    self.userDetailsErrorAlert()
+                guard let id = user?.uid else {
                     return
                 }
-                DatabaseService.instance.userID = userId
-                self.view.endEditing(true)
-                self.stopActivitySpinner()
-                self.performSegue(withIdentifier: "toHome", sender: nil)
+                DatabaseService.instance.getUserData(userID: id, completion: { (success) in
+                    if success {
+                        self.view.endEditing(true)
+                        self.stopActivitySpinner()
+                        self.performSegue(withIdentifier: "toHome", sender: nil)
+                    } else {
+                        // error handlig
+                    }
+                })
             })
         }
     }
@@ -136,6 +139,13 @@ class LoginVC: UIViewController {
         let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
         alert.addAction(cancelAtn)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.usernameTxt.text = ""
+        self.emailTxt.text = ""
+        self.passwordTxt.text = ""
+        self.confPasswordTxt.text = ""
     }
 }
 

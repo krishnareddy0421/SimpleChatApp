@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
 
@@ -21,6 +22,7 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = UserDataService.instance.username
         let sectionTitles = ["Chats", "People"]
         customSegmentCntrl.setSegmentItems(sectionTitles)
         self.sectionTitleLbl.text = "Recent Chats"
@@ -41,6 +43,17 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
             self.peopleContainerView.isHidden = true
         default:
             self.sectionTitleLbl.text = "Recent Chats"
+        }
+    }
+    
+    @IBAction func logoutBtnPressed(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            UserDataService.instance.userLogout()
+            self.dismiss(animated: true, completion: nil)
+        } catch let error {
+            // error handling
+            print(error)
         }
     }
 }
