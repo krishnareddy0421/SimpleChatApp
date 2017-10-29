@@ -14,7 +14,4 @@ class PeopleCell: UITableViewCell {
     @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var useremailLbl: UILabel!
     
-    @IBAction func sendMessageBtnPressed(_ sender: Any) {
-        
-    }
 }

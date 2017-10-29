@@ -22,7 +22,7 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = UserDataService.instance.username
+        self.title = "Welcome \(UserDataService.instance.username) !!!"
         let sectionTitles = ["Chats", "People"]
         customSegmentCntrl.setSegmentItems(sectionTitles)
         self.sectionTitleLbl.text = "Recent Chats"

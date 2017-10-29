@@ -49,4 +49,17 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
+        DatabaseService.instance.friendDetails = DatabaseService.instance.allUsers[indexPath.row]
+        self.presentChatVC()
+    }
+    
+    
+    func presentChatVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ChatVCNavigator")
+        self.present(controller, animated: true, completion: nil)
+    }
 }

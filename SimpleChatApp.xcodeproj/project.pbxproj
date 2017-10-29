@@ -17,6 +17,10 @@
 		9E78C6A91FA2366C00F87612 /* RecentChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6A81FA2366C00F87612 /* RecentChatsVC.swift */; };
 		9E78C6AB1FA236CC00F87612 /* RecentChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6AA1FA236CC00F87612 /* RecentChatCell.swift */; };
 		9E78C6AD1FA23A8900F87612 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6AC1FA23A8900F87612 /* UserDataService.swift */; };
+		9E78C6AF1FA4E5FA00F87612 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6AE1FA4E5FA00F87612 /* ChatVC.swift */; };
+		9E78C6B11FA6549000F87612 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6B01FA6549000F87612 /* KeyboardBoundView.swift */; };
+		9E78C6B31FA6593000F87612 /* FriendMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6B21FA6593000F87612 /* FriendMessageCell.swift */; };
+		9E78C6B51FA6593F00F87612 /* UserMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78C6B41FA6593F00F87612 /* UserMessageCell.swift */; };
 		9E7BD2581F9D538E0056CA73 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7BD2571F9D538E0056CA73 /* DatabaseService.swift */; };
 		9EACCDC11F9D266700F42BA1 /* TwicketSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDBE1F9D266700F42BA1 /* TwicketSegmentedControl.swift */; };
 		9EACCDC21F9D266700F42BA1 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EACCDBF1F9D266700F42BA1 /* Palette.swift */; };
@@ -40,6 +44,10 @@
 		9E78C6A81FA2366C00F87612 /* RecentChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatsVC.swift; sourceTree = "<group>"; };
 		9E78C6AA1FA236CC00F87612 /* RecentChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChatCell.swift; sourceTree = "<group>"; };
 		9E78C6AC1FA23A8900F87612 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		9E78C6AE1FA4E5FA00F87612 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		9E78C6B01FA6549000F87612 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardBoundView.swift; sourceTree = "<group>"; };
+		9E78C6B21FA6593000F87612 /* FriendMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendMessageCell.swift; sourceTree = "<group>"; };
+		9E78C6B41FA6593F00F87612 /* UserMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMessageCell.swift; sourceTree = "<group>"; };
 		9E7BD2571F9D538E0056CA73 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		9EACCDBD1F9D266600F42BA1 /* TwicketSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwicketSegmentedControl.h; sourceTree = "<group>"; };
 		9EACCDBE1F9D266700F42BA1 /* TwicketSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwicketSegmentedControl.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 				9E6C1D6A1F9D1DB30088CB37 /* HomeVC.swift */,
 				9EB0CE4C1F9EEF2B00C3B744 /* PeopleVC.swift */,
 				9E78C6A81FA2366C00F87612 /* RecentChatsVC.swift */,
+				9E78C6AE1FA4E5FA00F87612 /* ChatVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +152,9 @@
 			children = (
 				9EACCDC51F9D292200F42BA1 /* PeopleCell.swift */,
 				9E78C6AA1FA236CC00F87612 /* RecentChatCell.swift */,
+				9E78C6B01FA6549000F87612 /* KeyboardBoundView.swift */,
+				9E78C6B21FA6593000F87612 /* FriendMessageCell.swift */,
+				9E78C6B41FA6593F00F87612 /* UserMessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,13 +307,17 @@
 				9EACCDC11F9D266700F42BA1 /* TwicketSegmentedControl.swift in Sources */,
 				9EACCDC61F9D292200F42BA1 /* PeopleCell.swift in Sources */,
 				9EB0CE4D1F9EEF2B00C3B744 /* PeopleVC.swift in Sources */,
+				9E78C6B51FA6593F00F87612 /* UserMessageCell.swift in Sources */,
 				9E6C1D6B1F9D1DB30088CB37 /* HomeVC.swift in Sources */,
 				9EACCDC21F9D266700F42BA1 /* Palette.swift in Sources */,
 				9E78C6AD1FA23A8900F87612 /* UserDataService.swift in Sources */,
 				9E6C1D5A1F9D0FA40088CB37 /* LoginVC.swift in Sources */,
 				9E7BD2581F9D538E0056CA73 /* DatabaseService.swift in Sources */,
+				9E78C6B31FA6593000F87612 /* FriendMessageCell.swift in Sources */,
 				9E78C6A91FA2366C00F87612 /* RecentChatsVC.swift in Sources */,
+				9E78C6B11FA6549000F87612 /* KeyboardBoundView.swift in Sources */,
 				9E78C6AB1FA236CC00F87612 /* RecentChatCell.swift in Sources */,
+				9E78C6AF1FA4E5FA00F87612 /* ChatVC.swift in Sources */,
 				9E6C1D581F9D0FA40088CB37 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

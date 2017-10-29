@@ -15,6 +15,7 @@ class DatabaseService {
     static let instance = DatabaseService()
     
     var userID: String?
+    var friendDetails = [String: Any]()
     var allUsers = [[String: Any]]()
     
     func saveUserData(userID: String, userName: String, userEmail: String, completion: @escaping CompletionHandler) {
@@ -82,5 +83,19 @@ class DatabaseService {
             }
             completion(true)
         }, withCancel: nil)
+    }
+    
+    func sendMessage(message: String, sendTime: String, completion: @escaping CompletionHandler) {
+        let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
+        let uidRef = "\(userID!)+\(friendDetails["userId"]!)"
+        let userReference = ref.child("chatApp").child("chats").child(uidRef)
+        let values = ["senderID": userID, "message": message, "time": sendTime]
+        userReference.updateChildValues(values, withCompletionBlock: { (databaseErr, ref) in
+            if databaseErr != nil {
+                completion(false)
+                return
+            }
+            completion(true)
+        })
     }
 }
