@@ -12,4 +12,5 @@ class RecentChatCell: UITableViewCell {
 
     // MARK: - Outlets
     @IBOutlet weak var nameLbl: UILabel!
+    
 }

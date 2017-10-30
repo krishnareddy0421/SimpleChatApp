@@ -29,7 +29,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginVC" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,27 +234,26 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchPeopleCell" rowHeight="95" id="XJc-pj-Hbz" customClass="RecentChatCell" customModule="SimpleChatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="369" height="95"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="searchPeopleCell" rowHeight="90" id="XJc-pj-Hbz" customClass="RecentChatCell" customModule="SimpleChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="369" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XJc-pj-Hbz" id="jXa-eL-9Yo">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="94.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-rK-usk">
-                                                    <rect key="frame" x="18.5" y="23" width="332.5" height="48.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pj6-rK-usk">
+                                                    <rect key="frame" x="33" y="18" width="318" height="53.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                                     <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="pj6-rK-usk" secondAttribute="bottom" constant="15" id="4N8-uv-47i"/>
-                                                <constraint firstItem="pj6-rK-usk" firstAttribute="centerY" secondItem="jXa-eL-9Yo" secondAttribute="centerY" id="bfJ-x0-7hE"/>
-                                                <constraint firstItem="pj6-rK-usk" firstAttribute="centerX" secondItem="jXa-eL-9Yo" secondAttribute="centerX" id="f8C-1s-XEE"/>
-                                                <constraint firstItem="pj6-rK-usk" firstAttribute="width" secondItem="jXa-eL-9Yo" secondAttribute="width" multiplier="0.9" id="i5a-Os-ckm"/>
-                                                <constraint firstItem="pj6-rK-usk" firstAttribute="top" secondItem="jXa-eL-9Yo" secondAttribute="topMargin" constant="15" id="xeV-ZE-aM8"/>
+                                                <constraint firstItem="pj6-rK-usk" firstAttribute="top" secondItem="jXa-eL-9Yo" secondAttribute="topMargin" constant="10" id="F1R-P6-Bk8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pj6-rK-usk" secondAttribute="bottom" constant="10" id="Fhz-Mc-svd"/>
+                                                <constraint firstItem="pj6-rK-usk" firstAttribute="leading" secondItem="jXa-eL-9Yo" secondAttribute="leadingMargin" constant="25" id="TFz-DE-fha"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pj6-rK-usk" secondAttribute="trailing" constant="10" id="nPT-Sf-LeY"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -262,11 +261,6 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="7"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -299,21 +293,21 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" rowHeight="98" id="AJh-Fd-bhZ" customClass="PeopleCell" customModule="SimpleChatApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="369" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="peopleCell" rowHeight="90" id="AJh-Fd-bhZ" customClass="PeopleCell" customModule="SimpleChatApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="369" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AJh-Fd-bhZ" id="upj-L3-Jrj">
-                                            <rect key="frame" x="0.0" y="0.0" width="369" height="97.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="se0-oE-j90">
-                                                    <rect key="frame" x="18" y="18" width="323" height="33.5"/>
+                                                    <rect key="frame" x="18" y="18" width="323" height="33"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" red="0.1224730983" green="0.3899359107" blue="0.60431116819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZV-W4-OQz">
-                                                    <rect key="frame" x="18" y="56.5" width="328" height="19"/>
+                                                    <rect key="frame" x="18" y="56" width="328" height="19"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                                     <color key="textColor" red="0.59975576399999997" green="0.51085615159999997" blue="0.38514548539999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -354,7 +348,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KsP-e0-Fka" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="193.4032983508246"/>
+            <point key="canvasLocation" x="796" y="192.95352323838082"/>
         </scene>
         <!--Friend Name-->
         <scene sceneID="Dq3-av-yLf">
@@ -544,7 +538,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L4I-wi-EEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-678" y="33"/>
+            <point key="canvasLocation" x="-743" y="33"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BKa-MB-ZxR">

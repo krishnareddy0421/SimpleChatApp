@@ -18,6 +18,7 @@ class DatabaseService {
     var friendDetails = [String: Any]()
     var allUsers = [[String: Any]]()
     var messages = [[String: Any]]()
+    var recentContacts = [[String:Any]]()
     
     func saveUserData(userID: String, userName: String, userEmail: String, completion: @escaping CompletionHandler) {
         let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
@@ -137,6 +138,37 @@ class DatabaseService {
                 self.messages.append(values)
             }
             completion(true)
+        }, withCancel: nil)
+    }
+    
+    func getAllRecentContacts(userUid: String, completion: @escaping CompletionHandler) {
+        self.recentContacts.removeAll()
+        let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
+        let userReference = ref.child("chatApp").child("chats")
+        userReference.observe(.childAdded, with: { (snapshot) in
+            let key = snapshot.key
+            if key.range(of: "+"+userUid) != nil {
+                let replaced = key.replacingOccurrences(of: "+"+userUid, with: "")
+                let userReference = ref.child("chatApp").child("users").child(replaced)
+                userReference.observe(.value, with: { (snapshot) in
+                    if let user = snapshot.value as? [String: AnyObject] {
+                        guard let name = user["name"] as? String else {
+                            return
+                        }
+                        guard let email = user["email"] as? String else {
+                            return
+                        }
+                        guard let id = user["id"] as? String else {
+                            return
+                        }
+                        let values = ["username": name, "useremail": email, "userId": id]
+                        self.recentContacts.append(values)
+                        completion(true)
+                    } else {
+                        completion(false)
+                    }
+                }, withCancel: nil)
+            }
         }, withCancel: nil)
     }
 }

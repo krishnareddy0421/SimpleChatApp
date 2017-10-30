@@ -27,7 +27,7 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
         customSegmentCntrl.setSegmentItems(sectionTitles)
         self.sectionTitleLbl.text = "Recent Chats"
         customSegmentCntrl.delegate = self
-        self.recentChatsContainerView.isHidden = true
+        self.recentChatsContainerView.isHidden = false
         self.peopleContainerView.isHidden = true
     }
 
