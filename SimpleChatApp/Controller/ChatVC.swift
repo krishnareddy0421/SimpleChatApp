@@ -8,10 +8,10 @@
 
 import UIKit
 
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var txtField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
@@ -23,6 +23,22 @@ class ChatVC: UIViewController {
         view.bindToKeyboard()
         self.title = friendDetails["username"] as? String
         txtField.addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+        self.getAllMessagesByFriend()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    func getAllMessagesByFriend() {
+        let userUid = DatabaseService.instance.userID!
+        let friendUid = DatabaseService.instance.friendDetails["userId"] as? String
+        let bothUid = "\(userUid)+\(friendUid!)"
+        DatabaseService.instance.getAllMessages(uid: bothUid) { (success) in
+            if success {
+                self.tableView.reloadData()
+            } else {
+                // error handling
+            }
+        }
     }
 
     @objc func textDidChange(textField: UITextField) {
@@ -34,9 +50,16 @@ class ChatVC: UIViewController {
             return
         }
         time = getCurrentTime()
-        DatabaseService.instance.sendMessage(message: msgText, sendTime: time!) { (success) in
+        DatabaseService.instance.sendMessageToUserDatabase(message: msgText, sendTime: time!) { (success) in
             if success {
-                print(success)
+                DatabaseService.instance.sendMessageToFriendDatabase(message: msgText, sendTime: self.time!) { (success) in
+                    if success {
+                        self.txtField.text = ""
+                        self.view.endEditing(true)
+                    } else {
+                        // error handling
+                    }
+                }
             } else {
                 // error handling
             }
@@ -54,5 +77,40 @@ class ChatVC: UIViewController {
     
     @IBAction func cancelButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DatabaseService.instance.messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let message = DatabaseService.instance.messages[indexPath.row]
+        if message["senderUid"] as? String == DatabaseService.instance.userID {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "userMsgCell", for: indexPath) as? UserMessageCell {
+                
+                cell.messageLbl.text = message["message"] as? String
+                cell.timeLbl.text = message["time"] as? String
+                return cell
+            } else {
+                return UITableViewCell()
+            }
+        } else {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "friendMsgCell", for: indexPath) as? UserMessageCell {
+                
+                cell.messageLbl.text = message["message"] as? String
+                cell.timeLbl.text = message["time"] as? String
+                return cell
+            } else {
+                return UITableViewCell()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
 }

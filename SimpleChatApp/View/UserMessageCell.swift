@@ -8,6 +8,10 @@
 
 import UIKit
 
-class UserMessageCell: UICollectionViewCell {
-    
+class UserMessageCell: UITableViewCell {
+
+    // MARK: - Outlets
+    @IBOutlet weak var messageLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
+
 }

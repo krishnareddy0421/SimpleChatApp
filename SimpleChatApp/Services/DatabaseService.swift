@@ -17,6 +17,7 @@ class DatabaseService {
     var userID: String?
     var friendDetails = [String: Any]()
     var allUsers = [[String: Any]]()
+    var messages = [[String: Any]]()
     
     func saveUserData(userID: String, userName: String, userEmail: String, completion: @escaping CompletionHandler) {
         let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
@@ -85,11 +86,11 @@ class DatabaseService {
         }, withCancel: nil)
     }
     
-    func sendMessage(message: String, sendTime: String, completion: @escaping CompletionHandler) {
+    func sendMessageToUserDatabase(message: String, sendTime: String, completion: @escaping CompletionHandler) {
         let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
         let uidRef = "\(userID!)+\(friendDetails["userId"]!)"
-        let userReference = ref.child("chatApp").child("chats").child(uidRef)
-        let values = ["senderID": userID, "message": message, "time": sendTime]
+        let userReference = ref.child("chatApp").child("chats").child(uidRef).childByAutoId()
+        let values = ["senderUid": userID, "message": message, "time": sendTime]
         userReference.updateChildValues(values, withCompletionBlock: { (databaseErr, ref) in
             if databaseErr != nil {
                 completion(false)
@@ -97,5 +98,45 @@ class DatabaseService {
             }
             completion(true)
         })
+    }
+    
+    func sendMessageToFriendDatabase(message: String, sendTime: String, completion: @escaping CompletionHandler) {
+        let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
+        let uidRef = "\(friendDetails["userId"]!)+\(userID!)"
+        let userReference = ref.child("chatApp").child("chats").child(uidRef).childByAutoId()
+        let values = ["senderUid": userID, "message": message, "time": sendTime]
+        userReference.updateChildValues(values, withCompletionBlock: { (databaseErr, ref) in
+            if databaseErr != nil {
+                completion(false)
+                return
+            }
+            completion(true)
+        })
+    }
+    
+    func getAllMessages(uid: String, completion: @escaping CompletionHandler) {
+        self.messages.removeAll()
+        let ref = Database.database().reference(fromURL: "https://simplechatapp-ab260.firebaseio.com/")
+        let userReference = ref.child("chatApp").child("chats").child(uid)
+        userReference.observe(.childAdded, with: { (snapshot) in
+            if let message = snapshot.value as? [String: Any] {
+                guard let msg = message["message"] as? String else {
+                    completion(false)
+                    return
+                }
+                guard let uid = message["senderUid"] as? String else {
+                    completion(false)
+                    return
+                }
+                guard let sendTime = message["time"] as? String else {
+                    completion(false)
+                    return
+                }
+                
+                let values = ["senderUid": uid, "message": msg, "time": sendTime]
+                self.messages.append(values)
+            }
+            completion(true)
+        }, withCancel: nil)
     }
 }
