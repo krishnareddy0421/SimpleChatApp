@@ -91,7 +91,7 @@ class LoginVC: UIViewController {
                         self.stopActivitySpinner()
                         self.performSegue(withIdentifier: "toHome", sender: nil)
                     } else {
-                        // error handlig
+                        self.somethingWentWrong()
                     }
                 })
             })
@@ -120,27 +120,6 @@ class LoginVC: UIViewController {
             sender.setTitle("Already Have Account? Log In", for: .normal)
             signupLoginBtn.setTitle("Signup", for: .normal)
         }
-    }
-    
-    func userDetailsErrorAlert() {
-        let alert = UIAlertController.init(title: "Something Went Wrong", message: "Maybe passwords do not match.", preferredStyle: .alert)
-        let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAtn)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func userNotExistErrorAlert() {
-        let alert = UIAlertController.init(title: "Username/Password do not match", message: "Try Again", preferredStyle: .alert)
-        let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAtn)
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    func userEmailAlreadyExistsErrorAlert() {
-        let alert = UIAlertController.init(title: "Account with this email already exists.", message: "Try with other email", preferredStyle: .alert)
-        let cancelAtn = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
-        alert.addAction(cancelAtn)
-        self.present(alert, animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

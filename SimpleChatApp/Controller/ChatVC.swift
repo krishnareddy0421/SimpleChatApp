@@ -35,8 +35,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         DatabaseService.instance.getAllMessages(uid: bothUid) { (success) in
             if success {
                 self.tableView.reloadData()
-            } else {
-                // error handling
             }
         }
     }
@@ -56,12 +54,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     if success {
                         self.txtField.text = ""
                         self.view.endEditing(true)
-                    } else {
-                        // error handling
                     }
                 }
             } else {
-                // error handling
+                self.somethingWentWrong()
             }
         }
     }

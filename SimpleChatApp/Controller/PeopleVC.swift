@@ -25,7 +25,7 @@ class PeopleVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             if success {
                 self.tableView.reloadData()
             } else {
-                // error handling
+                self.somethingWentWrong()
             }
         }
     }

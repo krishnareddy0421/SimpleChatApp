@@ -52,7 +52,7 @@ class HomeVC: UIViewController, TwicketSegmentedControlDelegate  {
             UserDataService.instance.userLogout()
             self.dismiss(animated: true, completion: nil)
         } catch let error {
-            // error handling
+            self.somethingWentWrong()
             print(error)
         }
     }
